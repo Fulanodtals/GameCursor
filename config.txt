@@ -1,0 +1,7 @@
+mouse_speed=70
+scroll_speed=0.9
+
+left_click=0
+right_click=2
+dubble_click=1
+holding_click=3
