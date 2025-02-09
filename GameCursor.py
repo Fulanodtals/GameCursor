@@ -1,4 +1,4 @@
-from settings import config as settings
+from settings import Config as settings
 from plyer import notification
 from time import sleep
 import pyautogui
@@ -131,9 +131,6 @@ class MouseController:
                     pyautogui.doubleClick()
                     sleep(0.1) #deley para nao haver interferencia
 
-                '''if joystick.get_button(7): #atalho para abrir o teclado virtual
-                    pyautogui.hotkey('win', 'ctrl', 'o')
-                    keyboard = True'''
 
                 # movimentacoes de scroll
                 right_stick_y = joystick.get_axis(3)  # Eixo vertical do stick direito
@@ -151,18 +148,14 @@ class MouseController:
                     print(f"Velocidade reduzida para: {mouse_speed}")
     
         except Exception as e:
-            '''exc_type, exc_value, exc_tb = sys.exc_info()
+            exc_type, exc_value, exc_tb = sys.exc_info()
             print(f"\n\nOps, Algo deu errado!\n")
             print(f"Tipo de erro: {exc_type.__name__}")
             print(f"Mensagem de erro: {e}")
             print(f"Erro ocorrido no arquivo: {exc_tb.tb_frame.f_code.co_filename}")
             print(f"Na linha: {exc_tb.tb_lineno}")
-            print("\nO programa será encerrado em 10 segundos...")'''
+            print("\nO programa será encerrado em 10 segundos...")
             print(e)
             sleep(10)
         finally:
             pygame.quit()
-            
-
-if __name__ == "__main__":
-    MouseController.controller_moves()

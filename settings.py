@@ -13,7 +13,7 @@ pygame.joystick.init()
 
 PATH = './config.txt'
 
-class config():
+class Config():
     def getValue(variable):
         with open(PATH, "r") as f:
             for row in f:
@@ -43,6 +43,7 @@ class config():
         while True:
             pygame.event.pump()
             for i in range(num_buttons):
-                return print(f"Botão precionado btn|value{joystick.get_button(i), i}")
+                if joystick.get_button(i):
+                    print(f"Botão precionado: {i}")
             
             pygame.time.wait(100)
