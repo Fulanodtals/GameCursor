@@ -1,5 +1,9 @@
 '''
-Aqui é onde tem as configuracoes que acessam o arquivo txt
+Aqui é onde tem as configuracoes que acessam o arquivo txt onde tem 
+as funcoes getValue(?) e changeSpeed(?) e selectButton; abaixo uma 
+explicação de cada uma:
+
+Funcao GetValue(variable):
 '''
 from anyio import value
 import pygame
@@ -39,8 +43,6 @@ class config():
         while True:
             pygame.event.pump()
             for i in range(num_buttons):
-                if joystick.get_button(i):
-                    print(f"Botão {i} pressionado")
-                    return i
+                return print(f"Botão precionado btn|value{joystick.get_button(i), i}")
             
             pygame.time.wait(100)

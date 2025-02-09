@@ -6,8 +6,8 @@ import pygame
 import sys
 
 
-pygame.init() #inicia o pygame
-pygame.joystick.init() #inicia a configuracao do pygame para controles
+#pygame.init() #Inicia o pygame
+#pygame.joystick.init() #Inicia a configuracao do pygame para controles
 
 # Variável de controle global
 running = True
@@ -21,7 +21,7 @@ def toggle_running():
     
 class MouseController:
     @staticmethod
-    def messages(action): #funcao para mostrar as mensagens 
+    def messages(action): #Funcao para mostrar as mensagens 
         if action == 'good_connection':
             notification.notify(
                 title="Conexão bem-sucedida :)",
@@ -52,18 +52,18 @@ class MouseController:
             )
         
         
-    def connect_controller(): #funcao que conecta o controle
-        while pygame.joystick.get_count() == 0:# faz uma varredura para achar os controles
+    def connect_controller(): #Funcao que conecta o controle
+        while pygame.joystick.get_count() == 0: #Faz uma varredura para achar os controles
             print('Procurando controle...')
-            pygame.joystick.quit()#Fecha a varredura antiga
-            pygame.joystick.init()#inicia uma nova varredura
-            sleep(10)#time de 10s para verificar novamente
+            pygame.joystick.quit() #Fecha a varredura antiga
+            pygame.joystick.init() #Inicia uma nova varredura
+            sleep(10) #Time de 10s para verificar novamente
         else:
             print('Controle conectado!')
             MouseController.messages('good_connection')
 
-        joystick = pygame.joystick.Joystick(0)#adiciona o primeiro joystick a variavel
-        joystick.init()#inicia as acoes do controle
+        joystick = pygame.joystick.Joystick(0) #Adiciona o primeiro joystick a variavel
+        joystick.init() #Anicia as acoes do controle
         return joystick
     
 
@@ -151,16 +151,18 @@ class MouseController:
                     print(f"Velocidade reduzida para: {mouse_speed}")
     
         except Exception as e:
-            exc_type, exc_value, exc_tb = sys.exc_info()
+            '''exc_type, exc_value, exc_tb = sys.exc_info()
             print(f"\n\nOps, Algo deu errado!\n")
             print(f"Tipo de erro: {exc_type.__name__}")
             print(f"Mensagem de erro: {e}")
             print(f"Erro ocorrido no arquivo: {exc_tb.tb_frame.f_code.co_filename}")
             print(f"Na linha: {exc_tb.tb_lineno}")
-            print("\nO programa será encerrado em 10 segundos...")
+            print("\nO programa será encerrado em 10 segundos...")'''
+            print(e)
             sleep(10)
         finally:
             pygame.quit()
+            
 
 if __name__ == "__main__":
     MouseController.controller_moves()

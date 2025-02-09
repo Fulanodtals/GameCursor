@@ -1,1 +1,1 @@
-mouse_speed=65
+mouse_speed=90

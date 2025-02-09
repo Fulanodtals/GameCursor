@@ -1,12 +1,30 @@
-from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QTextEdit, QVBoxLayout, QGridLayout, QSystemTrayIcon, QMenu
+from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QTextEdit, QVBoxLayout, QGridLayout, QSystemTrayIcon, QMenu, QCheckBox
 from PyQt6.QtGui import QFont, QAction, QIcon
+from GameCursor import MouseController
 from PyQt6.QtCore import Qt
 import webbrowser
-from GameCursor import MouseController
+from settings import config
+import pygame
 import sys
+
+pygame.init() #Inicia o pygame
+pygame.joystick.init() #Inicia a configuracao do pygame para controles
+
 
 global joystick
 joystick = MouseController.connect_controller()
+
+class ConsoleOutput:
+    def __init__(self, text_widget):
+        self.text_widget = text_widget
+
+    def write(self, text):
+        self.text_widget.moveCursor(self.text_widget.textCursor().MoveOperation.End)
+        self.text_widget.insertPlainText(text)
+
+    def flush(self):
+        pass  # Necessário para compatibilidade com sys.stdout
+
 
 class GameCursorApp(QWidget):
     def __init__(self):
@@ -55,11 +73,18 @@ class GameCursorApp(QWidget):
         print("Controle conectado!")
         layout.addWidget(controller_info)
 
+        # CheckBox
+        self.checkbox = QCheckBox('Mostrar botões', self)
+        self.checkbox.stateChanged.connect(self.checkbox_change)
+        layout.addWidget(self.checkbox)
+
         # Output do console (logs)
         self.console_output = QTextEdit()
         self.console_output.setReadOnly(True)
         self.console_output.setPlaceholderText("Output do console aqui mostrando os logs")
         layout.addWidget(self.console_output)
+        
+        sys.stdout = ConsoleOutput(self.console_output)
 
         # Mostra o guia de botões
         buttons_layout = QGridLayout()
@@ -81,12 +106,20 @@ class GameCursorApp(QWidget):
         self.hide_button.clicked.connect(self.hide_window)
         layout.addWidget(self.hide_button)
         
-        self.setLayout(layout)#mostra a janela
+        self.setLayout(layout)# Mostra a janela
 
-        self.hide() #inicia com a janela oculta
+        self.hide() # Inicia com a janela oculta
 
-        #inicia o programa depois de renderizar o app:
+        # Inicia o programa depois de renderizar o app:
         MouseController.controller_moves()
+
+    def checkbox_change(self, state):
+        if state == 2: 
+            print("Os botões serão mostrados")
+            Config.selectButton()
+        else:
+            print("Os botões não serão mostrados")
+    
 
     def open_website(self):
         webbrowser.open("https://www.siteaqui.com.br")
