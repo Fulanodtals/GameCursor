@@ -1,7 +1,7 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLabel, QComboBox, QMessageBox
+from PyQt6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QLabel, QMessageBox
 from PyQt6.QtCore import Qt, QTimer
-import inputs  # Biblioteca para capturar eventos do joystick
+import GameCursor
 
 class JoystickControlWindow(QMainWindow):
     def __init__(self):
@@ -53,7 +53,6 @@ class JoystickControlWindow(QMainWindow):
         self.capturing_for = None  # Indica para qual botão estamos capturando (A ou B)
 
     def capture_button(self, button):
-        """Inicia a captura de um botão do joystick."""
         self.capturing_for = button
         QMessageBox.information(self, "Captura de Botão", f"Pressione um botão no controle para redefinir o botão {button}.")
         self.timer.start(100)  # Verifica eventos do joystick a cada 100ms

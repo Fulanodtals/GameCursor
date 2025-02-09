@@ -10,7 +10,7 @@ def main():
     
     joystick = pygame.joystick.Joystick(0)
     joystick.init()
-    
+    joystick.get_power_level()
     print(f"Controle detectado: {joystick.get_name()}")
     
     num_buttons = joystick.get_numbuttons()
