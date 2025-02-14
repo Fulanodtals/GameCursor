@@ -1,5 +1,7 @@
 import pygame
 
+#este codigo nao é usado no programa, é apenas para testes do controle
+
 def main():
     pygame.init()
     pygame.joystick.init()
@@ -10,7 +12,6 @@ def main():
     
     joystick = pygame.joystick.Joystick(0)
     joystick.init()
-    joystick.get_power_level()
     print(f"Controle detectado: {joystick.get_name()}")
     
     num_buttons = joystick.get_numbuttons()
@@ -23,8 +24,8 @@ def main():
         pygame.event.pump()
         for i in range(num_buttons):
             if joystick.get_button(i):
-                print(f"Botão {i} pressionado")
-        
+                print(f'botao: {joystick.get_button(i)} | index {i}')
+                
         pygame.time.wait(100)
 
 if __name__ == "__main__":

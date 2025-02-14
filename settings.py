@@ -1,17 +1,11 @@
-'''
-Aqui é onde tem as configuracoes que acessam o arquivo txt onde tem 
-as funcoes getValue(?) e changeSpeed(?) e selectButton; abaixo uma 
-explicação de cada uma:
-
-Funcao GetValue(variable):
-'''
-from anyio import value
 import pygame
+import os
 
 pygame.init()
 pygame.joystick.init()
 
-PATH = './config.txt'
+current_dir = os.path.dirname(os.path.abspath(__file__))
+PATH = os.path.join(current_dir, "config.txt")
 
 class Config():
     def getValue(variable):
@@ -27,15 +21,15 @@ class Config():
         with open(PATH, "r") as f:
             for row in f:
                 if row.startswith(variable + "="):
-                    new_speed.append(f"{variable}={value}\n")  # Modifica a row
+                    new_speed.append(f"{variable}={value}\n")
                 else:
                     new_speed.append(row)
 
         with open(PATH, "w") as f:
             f.writelines(new_speed)
     
-    @staticmethod
-    def selectButton():
+    #funcao nao usada
+    def selectButton():#funcao para mostrar os botoes quando clika
         joystick = pygame.joystick.Joystick(0)
         joystick.init()
         

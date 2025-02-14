@@ -1,18 +1,18 @@
-from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QTextEdit, QVBoxLayout, QGridLayout, QSystemTrayIcon, QMenu, QCheckBox
+from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QTextEdit, QVBoxLayout, QGridLayout, QSystemTrayIcon, QMenu
 from PyQt6.QtGui import QFont, QAction, QIcon
-from GameCursor import MouseController
-from settings import Config
+from controller import MouseController
 from PyQt6.QtCore import Qt
 import webbrowser
 import pygame
 import sys
+import os
 
 pygame.init() #Inicia o pygame
 pygame.joystick.init() #Inicia a configuracao do pygame para controles
 
 
 global joystick
-joystick = MouseController.connect_controller()
+joystick = MouseController.connect_controller()#verifica o controle antes de iniciar o programa
 
 class ConsoleOutput:
     def __init__(self, text_widget):
@@ -36,7 +36,9 @@ class GameCursorApp(QWidget):
         layout = QVBoxLayout() # Layout principal
         
         #Configuração do ícone da bandeja do sistema
-        self.tray_icon = QSystemTrayIcon(QIcon("icon.png"), self)
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        icon = os.path.join(current_dir, "icon.png")
+        self.tray_icon = QSystemTrayIcon(QIcon(icon), self)
         self.tray_icon.setToolTip("GameCursor")
 
         #menu do ícone da bandeja
@@ -73,10 +75,10 @@ class GameCursorApp(QWidget):
         # Output do console (logs)
         self.console_output = QTextEdit()
         self.console_output.setReadOnly(True)
-        self.console_output.setPlaceholderText("Output do console aqui mostrando os logs")
+        self.console_output.setPlaceholderText("logo")
         layout.addWidget(self.console_output)
         
-        sys.stdout = ConsoleOutput(self.console_output)
+        sys.stdout = ConsoleOutput(self.console_output)# recebe os logs externos
 
         # Mostra o guia de botões
         buttons_layout = QGridLayout()
@@ -100,25 +102,25 @@ class GameCursorApp(QWidget):
         
         self.setLayout(layout)# Mostra a janela
 
-        self.hide() # Inicia com a janela oculta
+        self.hide()# Inicia com a janela oculta
 
         # Inicia o programa depois de renderizar o app:
         MouseController.controller_moves()
     
 
-    def open_website(self):
+    def open_website(self):# abre o site 
         webbrowser.open("https://bit.ly/joaosantoslink")
 
-    def hide_window(self):
+    def hide_window(self):# enconde a tela no icone
         self.hide()
 
-    def show_window(self):
+    def show_window(self):# mostra a tela
         self.show()
         self.activateWindow()
 
-    def tray_activated(self, reason):
+    def tray_activated(self, reason):# funcao para transformar em icone
         if reason == QSystemTrayIcon.ActivationReason.Trigger:
-            self.show_window()
+            self.show_window()# esconde a janela
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

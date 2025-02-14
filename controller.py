@@ -63,11 +63,12 @@ class MouseController:
             MouseController.messages('good_connection')
 
         joystick = pygame.joystick.Joystick(0) #Adiciona o primeiro joystick a variavel
-        joystick.init() #Anicia as acoes do controle
+        joystick.init() #Inicia as acoes do controle
         return joystick
     
 
     def controller_moves(): #funcao que verifica os movimentos e faz as acoes
+        print("Bem-Vindo ao GameCursor")
         joystick = MouseController.connect_controller() #conecta com o controle
         LEFT_BUTTON = 0 #    A
         RIGHT_BUTTON = 1 #   B
@@ -108,7 +109,7 @@ class MouseController:
                 # Calcula aS posições do cursor
                 new_x = current_x + int(x_axis * mouse_speed)
                 new_y = current_y + int(y_axis * mouse_speed)
-                pyautogui.FAILSAFE = False #necessario para movimentacao da tela
+                pyautogui.FAILSAFE = False #necessario para movimentacao da tela com pyautogui
                 pyautogui.moveTo(new_x, new_y)
 
                 #Ações de click do controle
