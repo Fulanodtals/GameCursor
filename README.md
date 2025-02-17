@@ -92,6 +92,7 @@ Os outros arquivos porem ser deletados.<br>
 Para o programa funcionar você deve executar o arquivo main.py, e ha algumas possibilidades para facilitar que ele se
 inicie, vou mostrar algumas delas:
 
+
 ### Por meio do arquivo .vbs
 Você pode usar o **GameCursor.vbs** para executar o programa, apenas troque a parte <arquivo_main> pelo caminho do arquivo
 main.py presente na pasta do projeto.
@@ -109,13 +110,16 @@ e por fim cole o arquivo GameCursor.vps na pasta e o programa ira iniciar assim 
 
 (delay provável de 30-60 segundos)
 
-> [!IMPORTANT]
-> O programa inicia uma busca por controles antes de ser executado totalmente.
+> IMPORTANTE! <br>
+> O programa inicia uma busca por controles antes de ser executado totalmente;<br>
 > para cancelar essa busca precione `Ctrl + Shift + Esc` e finalize a tarefa.
 
+<br>
 
+******
 
-
+<div id='instalacao'/>
+   
 ## Controller
 
 <p id='instalacao'></p> <!gambiarra para linkar->
