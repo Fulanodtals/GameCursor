@@ -1,6 +1,6 @@
 import pygame
 
-#este codigo nao é usado no programa, é apenas para testes do controle
+# Este código não é usado no programa, é apenas para testes do controle
 
 def main():
     pygame.init()
@@ -13,14 +13,16 @@ def main():
     joystick = pygame.joystick.Joystick(0)
     joystick.init()
     print(f"Controle detectado: {joystick.get_name()}")
-    
+    print(f"ID: {joystick.get_id()}")
+    print(f"Nivel de bateria: {joystick.get_power_level()}")
+
     num_buttons = joystick.get_numbuttons()
     print(f"Número de botões: {num_buttons}")
-    
+    print(f"Número de eixos: {joystick.get_numaxes()}")
+
+
     print("Pressione os botões para ver o índice correspondente")
-    
-    running = True
-    while running:
+    while True:
         pygame.event.pump()
         for i in range(num_buttons):
             if joystick.get_button(i):

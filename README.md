@@ -1,4 +1,4 @@
-## GameCursor
+# GameCursor
 
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Fulanodtals/GameCursor?style=for-the-badge)
@@ -6,11 +6,15 @@
 ![GitHub forks](https://img.shields.io/github/forks/Fulanodtals/GameCursor?style=for-the-badge)
 
 
-<img src="./window.png" alt="Imagem do programa">
 
 ### Sobre o projeto
 
-O projeto GameCursor criado por <a href="https://github.com/Fulanodtals">Fulanodtals</a> possibilita que voce controle e execute ações com o mouse apartir de um controle de videogame, veja mais sobre o projeto <a href="#sumario">aqui</a> 
+O projeto GameCursor criado por [Fulanodtals](https://github.com/Fulanodtals) possibilita que você controle e 
+execute ações com o mouse apartir de um controle, como click, dubble click, click direito, arrastar, selecionar, 
+Veja mais sobre o projeto [aqui](#sumario)
+
+<img src="./readme_assets/window.png" alt="Imagem do programa">
+
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
@@ -21,26 +25,93 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [ ] opcao de modificar teclas na janela
 - [ ] outras utilidades...
 
-<p id='sumario'></p> <!gambiarra para linkar->
 
+
+<div id='sumario'/>
+
+*******
 ## Sumário da documentação
 
 Aqui esta linkado as partes do projeto que deseja ver:
-<div>
-    <li><a href="#">Controller</a></li>
-    <li><a href="#">Settings</a></li>
-    <li><a href="#">Main</a></li>
-    <li><a href="#">Buttons</a></li>
-</div><br>
 
+* **[Informações iniciais](#introducao)**
+* **[Instalação](#instalacao)**
+* **[Controller]()**
+* **[Settings]()**
+* **[Main]()**
+* **[Arquivo.vbs]()**
+* **[Buttons]()**   
+*******
+
+
+<div id='introducao'/>
 
 ##  Informações iniciais
 
-O GameCursor é feito usando POO, e sendo separado por tres arquivos:
-main.py - Arquivo principal onde tem a janela do programa
-controller.py - Classe que gerecia as ações do controle
-settings.py - Classe que interaje com o arquivo config.txt
-buttons.py - Arquivo que é usado para testar as teclas do controle.
+O GameCursor é organizado com POO, utilizando bibliotecas como pygame, pyautogui e PyQt6.<br> 
+Sendo separado por tres arquivos principais:
+* main.py - Arquivo principal onde tem a janela do programa
+* controller.py - Classe que gerencia as ações do controle
+* settings.py - Classe que interage com o arquivo config.txt
+
+E outros arquivos como:
+
+* GameCursor.vbs - arquivo que inicia o programa
+* settings.py - programa para testes de teclas
+
+Os tres primeiros são os principais que controlam, configuram e gerenciam o programa;
+Os outros dois podem ser usados também, principalmente o GameCursor.vbs mostrado na [Instalacao](#instalacao).
+
+Abaixo esta um exemplo de ação com o mouse, usando o GameCursor
+
+<img src="./readme_assets/precionando.gif" >
+
+
+
+<div id='instalacao'/>
+
+## Instalação
+Você de principio pode dar um git clone neste repositorio para uma pasta desejada:<br>
+```bash
+   git clone https://github.com/Fulanodtals/GameCursor.git
+```
+Acessando a pasta, voce pode excluir alguns arquivos, exceto os listados abaixo que são necessarios para o programa funcionar
+e não devem ser deletados! São eles:
+
+* main.py
+* controller.py
+* settings.py
+* config.txt
+* icon.png
+
+E o arquivo de inicialização
+
+* GameCursor.vbs
+
+Os outros arquivos porem ser deletados.<br>
+Para o programa funcionar você deve executar o arquivo main.py, e ha algumas possibilidades para facilitar que ele se
+inicie, vou mostrar algumas delas:
+
+### por meio do arquivo .vbs
+Você pode usar o **GameCursor.vbs** para executar o programa, apenas troque a parte <arquivo_main> pelo caminho do arquivo
+main.py presente na pasta do projeto.
+
+Apos isso ao executar este arquivo.vbs ele ira iniciar o programa, o que permite colocar este arquivo em varios lugares
+como no Desktop, barra de tarefas e principalmente na pasta de inicializar:
+
+Ao colocar o **GameCursor.vbs** na pasta de iniciar, o programa ira iniciar junto com o computador, segue como fazer isso:
+
+Precione a tecla `win + r` e digite:
+```shell
+  shell:startup
+```
+e por fim cole o arquivo GameCursor.vps na pasta e o programa ira iniciar assim que o computador for ligado
+
+(delay provável de 30-60 segundos)
+
+
+
+
 
 ## Controller
 
