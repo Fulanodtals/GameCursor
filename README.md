@@ -22,7 +22,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] criar conexao com o controle
 - [x] criar arquivo para guardar valores
 - [x] criar janela de gerenciamento
+- [ ] suavilizar a movimentacao do mouse
 - [ ] opcao de modificar teclas na janela
+- [ ] otimizar
 - [ ] outras utilidades...
 
 
@@ -62,6 +64,13 @@ E outros arquivos como:
 Os tres primeiros são os principais que controlam, configuram e gerenciam o programa;
 Os outros dois podem ser usados também, principalmente o GameCursor.vbs mostrado na [Instalacao](#instalacao).
 
+Quando o programa é iniciado(pelo arquivo main.py) é feita uma varredura de controles, ou seja, o programa so
+ira iniciar realmente quando um controle for conectado; se o controle for desconectado, o programa devera ser
+reiniciado!
+
+> ATENCAO:<br>
+> A varredura de controle é feita a cada 10s
+
 Abaixo esta um exemplo de ação com o mouse, usando o GameCursor
 
 <img src="./readme_assets/precionando.gif" >
@@ -73,7 +82,7 @@ Abaixo esta um exemplo de ação com o mouse, usando o GameCursor
 ## Instalação
 Você de principio pode dar um git clone neste repositorio para uma pasta desejada:<br>
 ```bash
-   git clone https://github.com/Fulanodtals/GameCursor.git
+git clone https://github.com/Fulanodtals/GameCursor.git
 ```
 Acessando a pasta, voce pode excluir alguns arquivos, exceto os listados abaixo que são necessarios para o programa funcionar
 e não devem ser deletados! São eles:
@@ -104,7 +113,7 @@ Ao colocar o **GameCursor.vbs** na pasta de iniciar, o programa ira iniciar junt
 
 Precione a tecla `win + r` e digite:
 ```shell
-  shell:startup
+shell:startup
 ```
 e por fim cole o arquivo GameCursor.vps na pasta e o programa ira iniciar assim que o computador for ligado
 
