@@ -38,11 +38,11 @@ Aqui esta linkado as partes do projeto que deseja ver:
 
 * **[Informações iniciais](#introducao)**
 * **[Instalação](#instalacao)**
-* **[Controller]()**
-* **[Settings]()**
-* **[Main]()**
-* **[Arquivo.vbs]()**
-* **[Buttons]()**   
+* **[Controller](#controller)**
+* **[Settings](#settings)**
+* **[Main](#main)**
+* **[Arquivo.vbs](#arquivovbs)**
+* **[Buttons](#buttons)**   
 *******
 
 
@@ -84,7 +84,7 @@ Você de principio pode dar um git clone neste repositorio para uma pasta deseja
 ```bash
 git clone https://github.com/Fulanodtals/GameCursor.git
 ```
-Acessando a pasta, voce pode excluir alguns arquivos, exceto os listados abaixo que são necessarios para o programa funcionar
+Acessando a pasta, você pode excluir alguns arquivos, exceto os listados abaixo que são necessarios para o programa funcionar
 e não devem ser deletados! São eles:
 
 * main.py
@@ -97,7 +97,7 @@ E o arquivo de inicialização
 
 * GameCursor.vbs
 
-Os outros arquivos porem ser deletados.<br>
+Os outros arquivos podem ser deletados.<br>
 Para o programa funcionar você deve executar o arquivo main.py, e ha algumas possibilidades para facilitar que ele se
 inicie, vou mostrar algumas delas:
 
@@ -115,7 +115,7 @@ Precione a tecla `win + r` e digite:
 ```shell
 shell:startup
 ```
-e por fim cole o arquivo GameCursor.vps na pasta e o programa ira iniciar assim que o computador for ligado
+e por fim cole o arquivo **GameCursor.vps** na pasta e o programa ira iniciar assim que o computador for ligado
 
 (delay provável de 30-60 segundos)
 
@@ -127,9 +127,20 @@ e por fim cole o arquivo GameCursor.vps na pasta e o programa ira iniciar assim 
 
 ******
 
-<div id='instalacao'/>
+<div id='controller'/>
    
 ## Controller
+
+O arquivo controller.py é responsavel por configrar o controle, conectar-lo e mostrar mensagens no computador,
+ele é essencial para gerir as ações que você deseja fazer com o controle; suas funcões são:
+
+### Função messages:
+Essa fução tem um unico objetivo de mostrar notificacão push do windows para informar o usuario, suas opções
+estão listadas na função, um exemplo de notificacão esta abaixo:
+
+<img src="./readme_assets/message.png" 
+
+### Função connect_controller
 
 <p id='instalacao'></p> <!gambiarra para linkar->
 
