@@ -134,13 +134,20 @@ e por fim cole o arquivo **GameCursor.vps** na pasta e o programa ira iniciar as
 O arquivo controller.py é responsavel por configrar o controle, conectar-lo e mostrar mensagens no computador,
 ele é essencial para gerir as ações que você deseja fazer com o controle; suas funcões são:
 
-### Função messages:
+   ### Função *messages()*:
 Essa fução tem um unico objetivo de mostrar notificacão push do windows para informar o usuario, suas opções
 estão listadas na função, um exemplo de notificacão esta abaixo:
 
 <img src="./readme_assets/message.png" 
 
-### Função connect_controller
+   ### Função *connect_controller()*
+Essa função é responsavel por procurar o primeiro controle conectado e retornar o seu valor.
+Ela faz uma verificacao por novos controles a cada 10 segundos, quando o controle é encontrado é mostrado uma
+notificacao de messages("good_connection")
+
+   ### Função *controller_moves()*
+Essa função é a principal, ela gerencia os movimentos do mouse e seus botoes
+
 
 <p id='instalacao'></p> <!gambiarra para linkar->
 
