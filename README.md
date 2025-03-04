@@ -1,3 +1,5 @@
+<div id='home'/>
+
 # GameCursor
 
 
