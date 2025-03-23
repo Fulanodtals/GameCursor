@@ -91,7 +91,7 @@ class GameCursorApp(QWidget):
         layout.addLayout(buttons_layout)
 
         # Botão para site
-        self.site_button = QPushButton("Acesse: bit.ly/joaosantoslink")
+        self.site_button = QPushButton("Acesse o projeto!")
         self.site_button.clicked.connect(self.open_website)
         layout.addWidget(self.site_button)
 
@@ -109,7 +109,7 @@ class GameCursorApp(QWidget):
     
 
     def open_website(self):# abre o site 
-        webbrowser.open("https://bit.ly/joaosantoslink")
+        webbrowser.open("https://github.com/Fulanodtals/GameCursor")
 
     def hide_window(self):# enconde a tela no icone
         self.hide()

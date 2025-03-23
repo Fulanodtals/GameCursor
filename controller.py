@@ -6,8 +6,8 @@ import pygame
 import sys
 
 
-#pygame.init() #Inicia o pygame
-#pygame.joystick.init() #Inicia a configuracao do pygame para controles
+pygame.init() #Inicia o pygame
+pygame.joystick.init() #Inicia a configuracao do pygame para controles
 
 # Variável de controle global
 running = True
@@ -85,8 +85,8 @@ class MouseController:
                         exit()
                         
                 #variaveis que serao manipuladas
-                mouse_speed = int(settings.getValue('mouse_speed'))
-                scroll_speed = 0.9
+                mouse_speed = int(settings.getValue('mouse_speed'))#pega a velocidade do mouse
+                scroll_speed = 0.9 #declara a velocisade do scroll
                 
                 #condicao que pausa ou continua o programa
                 if joystick.get_button(6) and joystick.get_button(7): #Botão start + menu
@@ -106,7 +106,7 @@ class MouseController:
                 y_axis = joystick.get_axis(1)  # Eixo vertical
                 current_x, current_y = pyautogui.position()  # Posição do mouse
 
-                # Calcula aS posições do cursor
+                # Calcula as posições do cursor
                 new_x = current_x + int(x_axis * mouse_speed)
                 new_y = current_y + int(y_axis * mouse_speed)
                 pyautogui.FAILSAFE = False #necessario para movimentacao da tela com pyautogui
@@ -149,14 +149,17 @@ class MouseController:
                     print(f"Velocidade reduzida para: {mouse_speed}")
     
         except Exception as e:
-            exc_type, exc_value, exc_tb = sys.exc_info()
+            exc_type, exc_tb = sys.exc_info()
             print(f"\n\nOps, Algo deu errado!\n")
             print(f"Tipo de erro: {exc_type.__name__}")
             print(f"Mensagem de erro: {e}")
             print(f"Erro ocorrido no arquivo: {exc_tb.tb_frame.f_code.co_filename}")
             print(f"Na linha: {exc_tb.tb_lineno}")
             print("\nO programa será encerrado em 10 segundos...")
-            print(e)
             sleep(10)
         finally:
             pygame.quit()
+
+if __name__ == "__main__":
+    run = MouseController
+    run.controller_moves()
