@@ -13,7 +13,7 @@
 
 O projeto GameCursor criado por [Fulanodtals](https://github.com/Fulanodtals) possibilita que você controle e 
 execute ações com o mouse apartir de um controle, como click, dubble click, click direito, arrastar, selecionar, 
-Veja mais sobre o projeto [aqui](#sumario)
+Instale o programa [aqui](#instalacao)<br>
 
 <img src="./readme_assets/window.png" alt="Imagem do programa">
 
@@ -31,7 +31,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [ ] outras utilidades...
 -->
 
-
+<!--
 <div id='sumario'/>
 
 *******
@@ -47,11 +47,11 @@ Aqui esta linkado as partes do projeto que deseja ver:
 * **[Arquivo.vbs](#arquivovbs)**
 * **[Buttons](#buttons)**   
 *******
-
+-->
 
 <div id='introducao'/>
 
-##  Informações iniciais
+##  Informações iniciais do projeto
 
 O GameCursor é organizado com POO, utilizando bibliotecas como pygame, pyautogui e PyQt6.<br> 
 Sendo separado por tres arquivos principais:
@@ -87,6 +87,7 @@ Você de principio pode dar um git clone neste repositorio para uma pasta deseja
 ```bash
 git clone https://github.com/Fulanodtals/GameCursor.git
 ```
+Eu recomendo ver as [Recomendações](#recomendacoes) após copiar os arquivos.<br>
 Acessando a pasta, você pode excluir alguns arquivos, exceto os listados abaixo que são necessarios para o programa funcionar
 e não devem ser deletados! São eles:
 
@@ -106,7 +107,7 @@ inicie, vou mostrar algumas delas:
 
 ### Apenas executando
 Nao é recomendado criar um .exe do arquivo principal, tanto por causa do windows defender quando pela má adaptação.
-entao apenas clique com o botao direito no main.py
+entao apenas clique com o botao direito no main.py, mas claro eu recomendo usar o arquivo .vbs por ser mais prático.
 
 ### Por meio do arquivo .vbs
 Você pode usar o **GameCursor.vbs** para executar o programa, apenas troque a parte <arquivo_main> pelo caminho do arquivo
@@ -133,55 +134,18 @@ e por fim cole o arquivo **GameCursor.vps** na pasta e o programa ira iniciar as
 <div id='recomendacoes'/>
 
 ###Recomendações!!!
+Eu recomendo você executar apenas o controller.py, por gastar menos memoria ao ser executado.
+Então se preferir assim, mantenha apenas os seguintes arquivos:
 
+* controller.py (Obvio)
+* settings.py
+* config.txt
 
+Excluindo os outros arquivos; Ao executar o controller.py o programa ira executar em segundo plano normalmente e só
+ira parar ao desconectar o controle.<br>
+Claro, coloque deve colocar o caminho deste arquivo no local indicado no arquivo GameCursor.vbs
+<br>
+<br>
 <br>
 
-******
-
-<div id='controller'/>
-   
-## Controller
-
-O arquivo controller.py é responsavel por configrar o controle, conectar-lo e mostrar mensagens no computador,
-ele é essencial para gerir as ações que você deseja fazer com o controle; suas funcões são:
-
-   ### Função *messages()*:
-Essa fução tem um unico objetivo de mostrar notificacão push do windows para informar o usuario, suas opções
-estão listadas na função, um exemplo de notificacão esta abaixo:
-
-<img src="./readme_assets/message.png" 
-
-   ### Função *connect_controller()*
-Essa função é responsavel por procurar o primeiro controle conectado e retornar o seu valor.
-Ela faz uma verificacao por novos controles a cada 10 segundos, quando o controle é encontrado é mostrado uma
-notificacao de messages("good_connection")
-
-   ### Função *controller_moves()*
-Essa função é a principal, ela gerencia os movimentos do mouse e seus botoes
-
-
-<p id='instalacao'></p> <!gambiarra para linkar->
-
-   ### Função *messages()*:
-Essa fução tem um unico objetivo de mostrar notificacão push do windows para informar o usuario, suas opções
-estão listadas na função, um exemplo de notificacão esta abaixo:
-
-<img src="./readme_assets/message.png" 
-
-   ### Função *connect_controller()*
-Essa função é responsavel por procurar o primeiro controle conectado e retornar o seu valor.
-Ela faz uma verificacao por novos controles a cada 10 segundos, quando o controle é encontrado é mostrado uma
-notificacao de messages("good_connection")
-
-   ### Função *controller_moves()*
-Essa função é a principal, ela gerencia os movimentos do mouse e seus botoes
-
-
-<p id='instalacao'></p> <!--gambiarra para linkar-->
-
-
-
-
-
-https://github.com/iuricode/readme-template/blob/main/repositorio/exemplo-01.md
+Obrigado por usar o programa
