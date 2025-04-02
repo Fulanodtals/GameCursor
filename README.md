@@ -17,6 +17,7 @@ Veja mais sobre o projeto [aqui](#sumario)
 
 <img src="./readme_assets/window.png" alt="Imagem do programa">
 
+<!--
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
@@ -28,7 +29,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [ ] opcao de modificar teclas na janela
 - [ ] otimizar
 - [ ] outras utilidades...
-
+-->
 
 
 <div id='sumario'/>
@@ -99,10 +100,13 @@ E o arquivo de inicialização
 
 * GameCursor.vbs
 
-Os outros arquivos podem ser deletados.<br>
-Para o programa funcionar você deve executar o arquivo main.py, e ha algumas possibilidades para facilitar que ele se
+Os outros arquivos podem ser deletados. Veja [Recomendações](#recomendacoes)<br>
+Para o programa funcionar você deve executar o arquivo main.py(ou controller.py), e ha algumas possibilidades para facilitar que ele se
 inicie, vou mostrar algumas delas:
 
+### Apenas executando
+Nao é recomendado criar um .exe do arquivo principal, tanto por causa do windows defender quando pela má adaptação.
+entao apenas clique com o botao direito no main.py
 
 ### Por meio do arquivo .vbs
 Você pode usar o **GameCursor.vbs** para executar o programa, apenas troque a parte <arquivo_main> pelo caminho do arquivo
@@ -124,6 +128,12 @@ e por fim cole o arquivo **GameCursor.vps** na pasta e o programa ira iniciar as
 > IMPORTANTE! <br>
 > O programa inicia uma busca por controles antes de ser executado totalmente;<br>
 > para cancelar essa busca precione `Ctrl + Shift + Esc` e finalize a tarefa.
+
+
+<div id='recomendacoes'/>
+
+###Recomendações!!!
+
 
 <br>
 
