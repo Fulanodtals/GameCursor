@@ -149,7 +149,7 @@ class MouseController:
                     print(f"Velocidade reduzida para: {mouse_speed}")
     
         except Exception as e:
-            exc_type, exc_tb = sys.exc_info()
+            exc_type, exc_value, exc_tb = sys.exc_info()
             print(f"\n\nOps, Algo deu errado!\n")
             print(f"Tipo de erro: {exc_type.__name__}")
             print(f"Mensagem de erro: {e}")

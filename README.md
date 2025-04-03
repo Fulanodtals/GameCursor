@@ -12,7 +12,7 @@
 ### Sobre o projeto
 
 O projeto GameCursor criado por [Fulanodtals](https://github.com/Fulanodtals) possibilita que você controle e 
-execute ações com o mouse apartir de um controle, como click, dubble click, click direito, arrastar, selecionar, 
+execute ações com o mouse apartir de um controle, como click, dubble click, click direito, arrastar, selecionar e outros.<br> 
 Instale o programa [aqui](#instalacao)<br>
 
 <img src="./readme_assets/window.png" alt="Imagem do programa">
@@ -144,6 +144,7 @@ Então se preferir assim, mantenha apenas os seguintes arquivos:
 Excluindo os outros arquivos; Ao executar o controller.py o programa ira executar em segundo plano normalmente e só
 ira parar ao desconectar o controle.<br>
 Claro, coloque deve colocar o caminho deste arquivo no local indicado no arquivo GameCursor.vbs
+
 <br>
 <br>
 <br>

@@ -28,7 +28,7 @@ class Config():
         with open(PATH, "w") as f:
             f.writelines(new_speed)
     
-    #funcao nao usada
+    #funcao não usada
     def selectButton():#funcao para mostrar os botoes quando clika
         joystick = pygame.joystick.Joystick(0)
         joystick.init()

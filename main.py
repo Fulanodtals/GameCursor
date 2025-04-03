@@ -14,7 +14,7 @@ pygame.joystick.init() #Inicia a configuracao do pygame para controles
 global joystick
 joystick = MouseController.connect_controller()#verifica o controle antes de iniciar o programa
 
-class ConsoleOutput:
+class ConsoleOutput:#classe para obter todos os logs
     def __init__(self, text_widget):
         self.text_widget = text_widget
 
