@@ -15,7 +15,12 @@ O projeto GameCursor criado por [Fulanodtals](https://github.com/Fulanodtals) po
 execute ações com o mouse apartir de um controle, como click, dubble click, click direito, arrastar, selecionar e outros.<br> 
 Instale o programa [aqui](#instalacao)<br>
 
-<img src="./readme_assets/window.png" alt="Imagem do programa">
+
+## veja o Tutorial:
+<a href="https://www.youtube.com/watch?v=awqex2CtUkk">
+  <img src="https://img.youtube.com/vi/awqex2CtUkk/hqdefault.jpg">
+</a>
+
 
 <!--
 ### Ajustes e melhorias
