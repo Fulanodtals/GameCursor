@@ -134,9 +134,12 @@ e por fim cole o arquivo **GameCursor.vps** na pasta e o programa ira iniciar as
 > para cancelar essa busca precione `Ctrl + Shift + Esc` e finalize a tarefa.
 
 
+
+*******
+
 <div id='recomendacoes'/>
 
-###Recomendações!!!
+# Recomendações!!!
 Eu recomendo você executar apenas o controller.py, por gastar menos memoria ao ser executado.
 Então se preferir assim, mantenha apenas os seguintes arquivos:
 
