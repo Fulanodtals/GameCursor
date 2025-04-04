@@ -59,15 +59,13 @@ Aqui esta linkado as partes do projeto que deseja ver:
 ##  Informações iniciais do projeto
 
 O GameCursor é organizado com POO, utilizando bibliotecas como pygame, pyautogui e PyQt6.<br> 
-Sendo separado por tres arquivos principais:
-* main.py - Arquivo principal onde tem a janela do programa
-* controller.py - Classe que gerencia as ações do controle
-* settings.py - Classe que interage com o arquivo config.txt
-
-E outros arquivos como:
+Sendo separado por alguns arquivos principais:
 
 * GameCursor.vbs - arquivo que inicia o programa
-* settings.py - programa para testes de teclas
+* main.py - Arquivo onde tem a janela do programa
+* controller.py - Classe que gerencia as ações do controle
+* settings.py - Classe que interage com o arquivo config.txt
+* config.txt - arquivo que guarda as velociades do cursor
 
 Os tres primeiros são os principais que controlam, configuram e gerenciam o programa;
 Os outros dois podem ser usados também, principalmente o GameCursor.vbs mostrado na [Instalacao](#instalacao).
