@@ -21,7 +21,24 @@ Instale o programa [aqui](#instalacao)<br>
   <img src="https://img.youtube.com/vi/awqex2CtUkk/hqdefault.jpg">
 </a>
 
+<br>
+<br>
 
+## Utilidades:
+A seguir esta listado tudo o que o programa consegue fazer:
+
+* A|X = click esquerdo
+* B|O = click direito
+* X|□ = click duplo
+* Y|△ = selecionar
+* L3 = controla o cursor
+* R3 = controla o scroll
+* RB|R1 = aumenta a velocidade do cursor
+* LB|L1 = diminui a velocidade do cursor
+* menu + start = pausa/dispausa o programa
+
+ <br>
+ 
 <!--
 ### Ajustes e melhorias
 
