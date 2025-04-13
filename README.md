@@ -111,12 +111,11 @@ Eu recomendo ver as [Recomendações](#recomendacoes) após copiar os arquivos.<
 Acessando a pasta, você pode excluir alguns arquivos, exceto os listados abaixo que são necessarios para o programa funcionar
 e não devem ser deletados! São eles:
 
-* main.py
-* [Veja o script principal](main.py)
-* controller.py
-* settings.py
-* config.txt
-* icon.png
+* [main.py](main.py)
+* [controller.py](controller.py)
+* [settings.py](settings.py)
+* [config.txt](config.txt)
+* [icon.png](icon.png)
 
 E o arquivo de inicialização
 
