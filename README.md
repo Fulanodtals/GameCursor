@@ -85,9 +85,9 @@ Sendo separado por alguns arquivos principais:
 * config.txt - arquivo que guarda as velociades do cursor
 
 Os tres primeiros são os principais que controlam, configuram e gerenciam o programa;
-Os outros dois podem ser usados também, principalmente o GameCursor.vbs mostrado na [Instalacao](#instalacao).
+Os outros dois são apenas para configurações, veja mais em [Instalacao](#instalacao).
 
-Quando o programa é iniciado(pelo arquivo main.py) é feita uma varredura de controles, ou seja, o programa so
+Quando o programa é [iniciado](#instalacao) é feita uma varredura de controles, ou seja, o programa so
 ira iniciar realmente quando um controle for conectado; se o controle for desconectado, o programa devera ser
 reiniciado!
 
@@ -103,7 +103,7 @@ Abaixo esta um exemplo de ação com o mouse, usando o GameCursor
 <div id='instalacao'/>
 
 ## Instalação
-Você de principio pode dar um git clone neste repositorio para uma pasta desejada:<br>
+De um git clone neste repositorio para uma pasta desejada ou abaixe os arquivos listados abaixo:<br>
 ```bash
 git clone https://github.com/Fulanodtals/GameCursor.git
 ```
