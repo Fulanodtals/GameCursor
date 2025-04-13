@@ -112,6 +112,7 @@ Acessando a pasta, você pode excluir alguns arquivos, exceto os listados abaixo
 e não devem ser deletados! São eles:
 
 * main.py
+* [Veja o script principal](main.py)
 * controller.py
 * settings.py
 * config.txt
