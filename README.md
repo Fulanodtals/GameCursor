@@ -103,13 +103,11 @@ Abaixo esta um exemplo de ação com o mouse, usando o GameCursor
 <div id='instalacao'/>
 
 ## Instalação
-De um git clone neste repositorio para uma pasta desejada ou abaixe os arquivos listados abaixo:<br>
-```bash
-git clone https://github.com/Fulanodtals/GameCursor.git
-```
-Eu recomendo ver as [Recomendações](#recomendacoes) após copiar os arquivos.<br>
-Acessando a pasta, você pode excluir alguns arquivos, exceto os listados abaixo que são necessarios para o programa funcionar
-e não devem ser deletados! São eles:
+Abaixe os arquivos necessarios para o programa rodar no link abaixo:<br>
+[abaixe aqui](https://github.com/Fulanodtals/GameCursor/blob/main/readme_assets/GameCursor.zip) <br><br>
+Por favor, veja [Recomendações](#recomendacoes) ou o [video tutorial](https://www.youtube.com/watch?v=awqex2CtUkk) após abaixar. <br>
+
+Acessando a pasta, temos os seguintes arquivos:
 
 * [main.py](main.py)
 * [controller.py](controller.py)
@@ -119,15 +117,28 @@ e não devem ser deletados! São eles:
 
 E o arquivo de inicialização
 
-* GameCursor.vbs
+* [GameCursor.vbs](GameCursor.vbs)
 
-Os outros arquivos podem ser deletados. Veja [Recomendações](#recomendacoes)<br>
+<br>
+
+ATENÇÃO:<br>
+Eu recomendo ter python e as bibliotecas usadas abaixadas,
+use o comando:
+```shell
+pip install pygame PyQt6 sys os pyautogui plyer 
+```
+
+<br>
+
+Veja [Recomendações](#recomendacoes)<br>
+
 Para o programa funcionar você deve executar o arquivo main.py(ou controller.py), e ha algumas possibilidades para facilitar que ele se
 inicie, vou mostrar algumas delas:
 
+
 ### Apenas executando
 Nao é recomendado criar um .exe do arquivo principal, tanto por causa do windows defender quando pela má adaptação.
-entao apenas clique com o botao direito no main.py, mas claro eu recomendo usar o arquivo .vbs por ser mais prático.
+então apenas clique com o botao direito no main.py, mas claro eu recomendo usar o arquivo .vbs por ser mais prático.
 
 ### Por meio do arquivo .vbs
 Você pode usar o **GameCursor.vbs** para executar o programa, apenas troque a parte <arquivo_main> pelo caminho do arquivo
